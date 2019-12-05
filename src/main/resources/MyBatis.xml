@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+		
+	<!-- 可以配置属性别名 -->
+	<typeAliases>
+		<typeAlias type="com.zhiyou.model.Admin" alias="admin"/>
+		<typeAlias type="com.zhiyou.model.Speaker" alias="speaker"/>
+		<typeAlias type="com.zhiyou.model.User" alias="user"/>
+	</typeAliases>
+
+</configuration>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- <mapper namespace="sb.sb1"> -->
+
+<mapper namespace="com.zhiyou.mapper.AdminMapper">
+	<select id="login" resultType="admin">
+		select * from admin where accounts = #{accounts};
+	</select>
+	<resultMap type="speaker" id="speaker">
+		<id column="id" property="id"/>
+		<result column="speaker_name" property="speaker_name"/>
+		<result column="speaker_desc" property="speaker_desc"/>
+		<result column="speaker_job" property="speaker_job"/>
+		<result column="pic_url" property="pic_url"/>
+	
+	</resultMap>
+	<select id="videShow" resultMap="speaker">
+		select * from speaker;
+	</select>
+	<select id="SpeakerSelectById" resultType="speaker">
+		select * from speaker where id = #{id};
+	</select>
+
+
+
+</mapper>

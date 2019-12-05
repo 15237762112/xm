@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- <mapper namespace="sb.sb1"> -->
+
+<mapper namespace="com.zhiyou.mapper.UserMapper">
+	
+	
+	<insert id="add" parameterType="user">
+		insert into user values(#{id},#{accounts},#{phone},#{password},#{nickname},#{sex},#{birthday},#{address},#{imgurl},#{createtime})
+	</insert>
+	
+	<update id="update" parameterType="user">
+		update user 
+		<set>
+			 <if test="accounts!=null">
+			 	accounts=#{accounts},
+			 </if>
+			 <if test="password!=null">
+			 	password= #{password},
+			 </if>
+			 <if test="nickname!=null">
+			 	nickname=#{nickname},
+			 </if>
+			 <if test="sex!=null">
+			 	sex=#{sex},
+			 </if>
+			 <if test="birthday!=null">
+			 	birthday=#{birthday},
+			 </if>
+			 <if test="address!=null">
+			 	address=#{address},
+			 </if>
+			 <if test="imgurl!=null">
+			 	imgurl=#{imgurl}
+			 </if>
+		</set>
+		where id=#{id}
+	</update>
+	
+	<select id="selectByAccounts" resultType="user">
+		select * from user where accounts=#{accounts}
+	</select>
+	
+	
+	
+</mapper>
