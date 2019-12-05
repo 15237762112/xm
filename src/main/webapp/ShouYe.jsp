@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="z/css.css">
 <link rel="icon" href="http://localhost:8080/Voids/static/z/favicon.png"
 	type="image/png">
-<title>在线公开课-智游教育|java|大数据|HTML5|python|UI|PHP视频教程</title>
+<title>在线公开课-智游教育|java|大数据|HTML5|python|UI|PHP视频教程1</title>
 
 </head>
 
